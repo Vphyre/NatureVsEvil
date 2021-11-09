@@ -20,9 +20,10 @@ public class GameManager : MonoBehaviour
         set{this.enemiesAmount = value;}
     }
     [SerializeField] private int seedsIncreaseRatio = 5;
-    void Start()
+    void Aweke()
     {
         instance = this;
+        Time.timeScale = 1f;
         InvokeRepeating("SeedsGain",1f,1f);
     }
     void Update()
