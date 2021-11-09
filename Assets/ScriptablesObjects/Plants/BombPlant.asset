@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37dc0133b91fd3c4592737e290161b3b, type: 3}
-  m_Name: ShooterPlant
+  m_Name: BombPlant
   m_EditorClassIdentifier: 
-  life: 28
-  maxReachPoint: 8
+  life: 60
+  maxReachPoint: 0.8
+  texture: {fileID: 2800000, guid: 7dcf016db3ebbf1488e5c1bcc9971a01, type: 3}

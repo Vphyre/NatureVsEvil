@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37dc0133b91fd3c4592737e290161b3b, type: 3}
   m_Name: ShooterPlant
   m_EditorClassIdentifier: 
-  life: 28
-  maxReachPoint: 8
+  life: 30
+  maxReachPoint: 8.5
+  texture: {fileID: 2800000, guid: 4bcd2c7e4b720ff44a0bb2660a9725ff, type: 3}

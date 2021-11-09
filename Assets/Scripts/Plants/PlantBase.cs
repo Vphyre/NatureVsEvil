@@ -6,10 +6,13 @@ public abstract class PlantBase : MonoBehaviour
 {
     [SerializeField] protected PlantData plantData;
     [SerializeField] protected Animator animator;
-    private int life;
+    [SerializeField] protected RaycastHit hitObj;
+    protected bool sightTigger;
+    [SerializeField] protected float life;
     protected virtual void Start()
     {
-        life = plantData._life;
+        life = (float)plantData._life;
+        sightTigger = false;
     }
 
     protected virtual void Update()
@@ -18,10 +21,10 @@ public abstract class PlantBase : MonoBehaviour
     }
     protected virtual void OnSight()
     {
-        if(Physics.Raycast(transform.position, transform.right, plantData._maxReachPoint))
+        sightTigger = Physics.Raycast(new Vector3(transform.position.x, transform.position.y+0.5f, transform.position.z), transform.right, out hitObj, plantData._maxReachPoint, LayerMask.GetMask("Enemy"));
+        if( sightTigger )
         {
             SpecificAction();
-            print("Entrou"+gameObject.name);
         }
     }
     protected virtual void SpecificAction()
@@ -31,13 +34,21 @@ public abstract class PlantBase : MonoBehaviour
     protected virtual void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawLine(transform.position, new Vector3(transform.position.x+plantData._maxReachPoint, transform.position.y, transform.position.z));
+        Gizmos.DrawLine(new Vector3(transform.position.x, transform.position.y+0.5f, transform.position.z), new Vector3(transform.position.x+plantData._maxReachPoint, transform.position.y, transform.position.z));
     }
-    public void GetDamage(int damage)
+    private void GetDamage(float damage)
     {
+        life -= damage;
         if(life<=0)
         {
             gameObject.SetActive(false);
         }
+    }
+    protected void OnTriggerEnter(Collider other)
+    {
+        if( other.gameObject.layer == LayerMask.NameToLayer("EnemyHit"))
+        {
+            GetDamage(10f);
+        }        
     }
 }

@@ -36,16 +36,32 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
-     <Compile Include="Assets\Scripts\teste.cs" />
-     <Compile Include="Assets\Scripts\Plants\PlantBase.cs" />
-     <Compile Include="Assets\Scripts\Plants\ShootPlant\ShooterPlant.cs" />
-     <Compile Include="Assets\Scripts\Pooling.cs" />
-     <Compile Include="Assets\Scripts\Plants\Projectiles\Projectile.cs" />
-     <Compile Include="Assets\Scripts\Plants\Projectiles\ProjectilesData.cs" />
-     <Compile Include="Assets\Scripts\Plants\PlantData.cs" />
-     <Compile Include="Assets\Scripts\Plants\Projectiles\ShooterPlantBullet.cs" />
+     <Compile Include="Assets\Scripts\Plants\BittingPlant\Tongue.cs" />
      <Compile Include="Assets\Scripts\Plants\BombPlant\BombPlant.cs" />
+     <Compile Include="Assets\Scripts\Plants\Projectiles\ProjectilesData.cs" />
+     <Compile Include="Assets\Scripts\Plants\BarrierPlant\BarrierPlant.cs" />
+     <Compile Include="Assets\Scripts\Plants\ShootPlant\ShooterPlant.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Zombis\ZombiData.cs" />
+     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+     <Compile Include="Assets\Scripts\Plants\PlantData.cs" />
+     <Compile Include="Assets\Scripts\Zombis\ZombiBase.cs" />
+     <Compile Include="Assets\Scripts\Pooling.cs" />
+     <Compile Include="Assets\Scripts\Plants\BittingPlant\BittingPlant.cs" />
+     <Compile Include="Assets\Scripts\Plants\PlantBase.cs" />
+     <Compile Include="Assets\Scripts\Zombis\NormalZombi\NormalZombi.cs" />
+     <Compile Include="Assets\Scripts\Plants\Projectiles\Projectile.cs" />
+     <Compile Include="Assets\Scripts\Plants\Projectiles\ShooterPlantBullet.cs" />
+     <Compile Include="Assets\Scripts\Zombis\TeleportZombi\TeleportZombi.cs" />
+     <Compile Include="Assets\Scripts\Zombis\ReinforcedZombi\ReinforcedZombi.cs" />
+     <Compile Include="Assets\Scripts\Zombis\KingZombi\KingZombi.cs" />
+     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\GameOver.cs" />
+     <Compile Include="Assets\Scripts\SeedManager.cs" />
+     <Compile Include="Assets\Scripts\Node.cs" />
+     <Compile Include="Assets\Scripts\UI.cs" />
+     <Compile Include="Assets\Scripts\SeedsButton.cs" />
+     <Compile Include="Assets\Scripts\Plants\GetTexture.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
