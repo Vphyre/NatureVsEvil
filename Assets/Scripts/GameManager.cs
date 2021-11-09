@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
         if(enemiesAmount<=0)
         {
             winScreen.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 
